@@ -28,6 +28,7 @@ function init(dataSource) {
 
     function getMovies(name, cb){
         //insert %20?
+        //var argsString = Array.prototype.join.call(name, "%20");
         const path = `https://api.themoviedb.org/3/search/movie?api_key=668c5f272f87669446f01cfcc3ab13f4&query=${name}`;
         reqAsJson(path, cb);
     }
