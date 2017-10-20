@@ -3,7 +3,6 @@ module.exports = Movie
 function Movie(movieDetails, cast) {
     this.title = movieDetails.title
     this.original_title = movieDetails.original_title
-    this.adult = movieDetails.adult
     this.genres = movieDetails.genres
     this.original_language = movieDetails.original_language
     this.overview = movieDetails.overview
