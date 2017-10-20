@@ -11,7 +11,11 @@
     <li>Genres: {{genres}}</li>
     <li>Original Language: {{original_language}}</li>
     <li>Release Date: {{release_date}}</li>
-    <li>Genres: {{genres}}</li>
+    <li>Genres: {{#each genres}}
+        <tr>
+            <td>{{name}}, </td>
+        </tr>
+        {{/each}}</li>
     <li>Rate: {{vote_average}}</li>
     <li>Overview: {{overview}}</li>
     <li>Cast: </li>
