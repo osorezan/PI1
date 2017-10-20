@@ -1,6 +1,7 @@
 'use strict'
 
 const Movie = require('./model/Movie')
+const Actor = require('./model/Actor')
 
 module.exports = init
 
