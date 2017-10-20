@@ -2,7 +2,7 @@
 
 const Movie = require('./model/Movie')
 
-module.exports = MService
+module.exports = init
 
 function init(dataSource) {
     let req
