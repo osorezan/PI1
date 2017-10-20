@@ -1,6 +1,7 @@
 'use strict'
 
 const Movie = require('./model/Movie')
+const Actor = require('./model/Actor')
 
 module.exports = init
 
@@ -34,7 +35,7 @@ function init(dataSource) {
     }
 
     function getActorDetails(actorId , cb){
-        const actorPath = `https://api.themoviedb.org/3/person/${actorId}?api_key=668c5f272f87669446f01cfcc3ab13f4\\`
+        const actorPath = `https://api.themoviedb.org/3/person/${actorId}?api_key=668c5f272f87669446f01cfcc3ab13f4`
         const charPath = `https://api.themoviedb.org/3/person/${actorId}/movie_credits?api_key=668c5f272f87669446f01cfcc3ab13f4`
         reqAsJson(actorPath, (err, actor) => {
             if(err) return cb(err)
