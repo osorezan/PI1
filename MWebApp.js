@@ -6,6 +6,7 @@ const mser = require('./MServer')()
 const port = 3000
 
 const server = http.createServer(router)
+
 server.listen(port)
 
 const routes = {
@@ -27,6 +28,7 @@ const routes = {
       view:view('./views/SearchMoviesView.hbs')
     }
 }
+
 function router(req, resp) {
     const urlObj = url.parse(req.url, true)
     const actionName = urlObj.pathname.substring(1)

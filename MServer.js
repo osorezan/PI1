@@ -58,5 +58,4 @@ function init(dataSource) {
         });
     }
 
-
 }
