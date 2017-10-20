@@ -6,7 +6,7 @@
 <ul>
     {{#each results}}
     <tr>
-        <h2>{{title}}:</h2>
+        <h2><p><a href="http://localhost:3000/MovieDetail?movieId={{id}}">{{title}}:</a></p></h2>
         <img width='100px' src='https://image.tmdb.org/t/p/w500{{poster_path}}'/>
     </tr>
     {{/each}}
