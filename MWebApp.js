@@ -19,7 +19,7 @@ const routes = {
 
     'MovieDetail': {
         action: mser.getMovieDetails,
-        view: view('./views/MovieDetailView.css')
+        view: view('./views/MovieDetailView.html')
     },
     'Actor': {
         action: mser.getActorDetails,
