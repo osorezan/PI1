@@ -10,6 +10,6 @@ function Movie(movieDetails, cast) {
     this.release_date = movieDetails.release_date
     this.tagline = movieDetails.tagline
     this.vote_average = movieDetails.vote_average
-    img = movieDetails.poster_path
+    this.poster_path = movieDetails.poster_path
     this.cast = cast.cast
 }
