@@ -33,6 +33,7 @@ function init(dataSource) {
     }
 
     function getMovieDetails(movieId, cb){
+        //TODO, search a cache first
         const moviePath = "https://api.themoviedb.org/3/movie/${movie_id}?api_key=668c5f272f87669446f01cfcc3ab13f4&query=${name}";
         const charPath = "https://api.themoviedb.org/3/movie/{movie_id}/credits?api_key=668c5f272f87669446f01cfcc3ab13f4";
         reqAsJson(moviePath, (err, movie) => {
