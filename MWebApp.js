@@ -20,7 +20,7 @@ const routes = {
     },
     'Movies': {
         action: foot.getMovies,
-        view: view('./views/MoviesView.hbs')
+        view: view('./views/MoviesListView.hbs')
     }
 }
 
