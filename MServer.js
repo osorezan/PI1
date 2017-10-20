@@ -33,9 +33,9 @@ function init(dataSource) {
         reqAsJson(path, cb);
     }
 
-    function getActorDetails(id , cb){
-        const actorPath = "https://api.themoviedb.org/3/person/{person_id}?api_key=668c5f272f87669446f01cfcc3ab13f4"
-        const charPath = "https://api.themoviedb.org/3/person/{person_id}/movie_credits?api_key=668c5f272f87669446f01cfcc3ab13f4"
+    function getActorDetails(actorId , cb){
+        const actorPath = `https://api.themoviedb.org/3/person/${actorId}?api_key=668c5f272f87669446f01cfcc3ab13f4\\`
+        const charPath = `https://api.themoviedb.org/3/person/${actorId}/movie_credits?api_key=668c5f272f87669446f01cfcc3ab13f4`
         reqAsJson(actorPath, (err, actor) => {
             if(err) return cb(err)
             reqAsJson(charPath, (err, char) => {
