@@ -21,10 +21,12 @@ const routes = {
     'Movies': {
         action: mser.getMovies,
         view: view('./views/MoviesListView.hbs')
+    },
+    '':{
+      action:(cb) => cb(),
+      view:view('./views/SearchMoviesView.hbs')
     }
 }
-
-//resp e o callback!
 function router(req, resp) {
     const urlObj = url.parse(req.url, true)
     const actionName = urlObj.pathname.substring(1)

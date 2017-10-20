@@ -7,16 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="row">
-    <div class="col-lg-6">
-        <div class="input-group">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-            </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-    </div><!-- /.row -->
+
+<script type="text/javascript">
+
+
+    function sendToPage(){
+        var input = document.getElementById("search").value;
+        //alert(input);
+        if (input != ""){
+            location.replace("Movies?name="+input
+                    .replace(" ", "%20"));
+            return false;
+        }
+        else {
+            alert('Invalid Input.');
+        }
+    }
+</script>
+
+<div>
+    <form action="" onsubmit="return sendToPage()" method="post">
+        <input type="text" id="search" placeholder="Search" value="">
+    </form>
+</div>
+
 </body>
 </html>
