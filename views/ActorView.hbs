@@ -1,0 +1,29 @@
+<html>
+<head>
+
+</head>
+<body>
+<h2>{{name}}:</h2>
+<ul>
+    <img width='100px' src='{{profile_path}}'/>
+    <li>Birthday: {{birthday}}</li>
+    <li>Deathday: {{deathday}}</li>
+    <li>Place Of Birth: {{place_of_birth}}</li>
+    <li>Homepage: {{homepage}}</li>
+    <li>Biography: {{biography}}</li>
+    <li>Films: </li>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Character</th>
+        </tr>
+        {{#each cast}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{character}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</ul>
+</body>
+</html>
