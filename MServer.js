@@ -13,7 +13,7 @@ function init(dataSource) {
 
     const services = {
         getMovies,
-        getActors,
+        //getActors,
         getMovieDetails,
     }
     return services

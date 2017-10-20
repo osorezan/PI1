@@ -24,12 +24,14 @@ const routes = {
     }
 }
 
+//resp e o callback!
 function router(req, resp) {
     const urlObj = url.parse(req.url, true)
     const actionName = urlObj.pathname.substring(1)
     if(routes[actionName] != undefined) {
         const action = routes[actionName].action
         const view = routes[actionName].view
+        //TODO, Going to have to redo mapParameters probably
         const parameters = mapParameters(urlObj.query, action)
         parameters.push(actionCallback(resp, view))
         action.apply(this, parameters)
