@@ -1,5 +1,7 @@
 'use strict'
 
+const Movie = require('./model/Movie')
+
 module.exports = MService
 
 function init(dataSource) {
@@ -12,6 +14,7 @@ function init(dataSource) {
     const services = {
         getMovies,
         getActors,
+        getMovieDetails,
     }
     return services
 
@@ -28,4 +31,18 @@ function init(dataSource) {
         const path = "https://api.themoviedb.org/3/search/movie?api_key=668c5f272f87669446f01cfcc3ab13f4&query=${name}";
         reqAsJson(path, cb);
     }
+
+    function getMovieDetails(movieId, cb){
+        const moviePath = "https://api.themoviedb.org/3/movie/${movie_id}?api_key=668c5f272f87669446f01cfcc3ab13f4&query=${name}";
+        const charPath = "https://api.themoviedb.org/3/movie/{movie_id}/credits?api_key=668c5f272f87669446f01cfcc3ab13f4";
+        reqAsJson(moviePath, (err, movie) => {
+            if (err) return cb(err)
+            reqAsJson(charPath, (err, char) => {
+                if (err) return cb(err)
+                cb(null, new Movie(movie, char))
+            });
+        });
+    }
+
+
 }
