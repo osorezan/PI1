@@ -19,7 +19,7 @@ const routes = {
         view: view('./views/ActorView.hbs')
     },
     'Movies': {
-        action: foot.getMovies,
+        action: mser.getMovies,
         view: view('./views/MoviesListView.hbs')
     }
 }
@@ -37,6 +37,7 @@ function router(req, resp) {
         action.apply(this, parameters)
     } else {
         resp.statusCode = 404 // Resource Not Found
+
         resp.end()
     }
 }
