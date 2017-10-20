@@ -1,24 +1,40 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>COIMA.com</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        ul {
+            margin: 0 auto;
+            text-align: center;
+        }
 
+        li {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .bodyType {
+            font: normal normal 14px/normal "Times New Roman", Times, serif;
+            color: rgba(4,55,73,1);
+        }
+    </style>
 </head>
-<body>
-<h2>{{title}}:</h2>
-<ul>
-    <img width='100px' src='https://image.tmdb.org/t/p/w500{{poster_path}}'/>
-    <li>Original Title: {{original_title}}</li>
-    <li>Tagline: {{tagline}}</li>
-    <li>Original Language: {{original_language}}</li>
-    <li>Release Date: {{release_date}}</li>
-    <li>Genres: {{#each genres}}
-        <tr>
-            <td>{{name}}, </td>
-        </tr>
-        {{/each}}</li>
-    <li>Rate: {{vote_average}}</li>
-    <li>Overview: {{overview}}</li>
-    <li>Cast: </li>
-    <table>
+<body class="bodyType">
+    <h2>{{title}}:</h2>
+    <li><img width='200px' src='https://image.tmdb.org/t/p/w500{{poster_path}}' style="float: left;"/>
+        <p><b>Tagline:</b>          {{tagline}}</p>
+        <p><b>Original Language:</b> {{original_language}}</p>
+        <p><b>Release Date:</b>      {{release_date}}</p>
+        <p><b>Genres:</b>          {{#each genres}}{{name}},{{/each}}</p>
+        <p><b>Rate:</b>             {{vote_average}}</p>
+        <p><b>Overview:</b>         {{overview}}</p>
+    <li>
+        <h2>Cast:</h2>
+        <table>
         <tr>
             <th>Character</th>
             <th>Name</th>
@@ -30,6 +46,6 @@
         </tr>
         {{/each}}
     </table>
-</ul>
+</li>
 </body>
 </html>
