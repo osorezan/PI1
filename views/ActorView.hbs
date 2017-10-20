@@ -1,7 +1,4 @@
 <html>
-<head>
-
-</head>
 <body>
 <h2>{{name}}:</h2>
 <ul>
@@ -14,12 +11,12 @@
     <li>Films: </li>
     <table>
         <tr>
-            <th>Name</th>
+            <th>Title</th>
             <th>Character</th>
         </tr>
         {{#each cast}}
         <tr>
-            <td>{{name}}</td>
+            <td><p><a href="http://localhost:3000/MovieDetail?movieId={{id}}">{{title}}</a></p></td>
             <td>{{character}}</td>
         </tr>
         {{/each}}
