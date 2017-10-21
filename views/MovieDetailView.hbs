@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
+
         ul {
             margin: 0 auto;
             text-align: center;
@@ -20,32 +21,112 @@
         .bodyType {
             font: normal normal 14px/normal "Times New Roman", Times, serif;
             color: rgba(4,55,73,1);
+            background-image: url("http://enjoycss.com/bg-img/custom/22201-aaavzo.png");
+            background-repeat: repeat;
         }
+
+        .wide {
+            display: inline-block;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            margin: 5%;
+            padding: 10px 20px;
+            border: 1px solid #b7b7b7;
+            -webkit-border-radius: 3px;
+            border-radius: 10px;
+            background-color: WhiteSmoke;
+            color: rgba(4,55,73,1);
+            -o-text-overflow: clip;
+            text-overflow: clip;
+            -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+            box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+            text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+            -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+            -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+            -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+            transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+            -o-box-shadow:      12px 12px 29px #555;
+            -icab-box-shadow:   12px 12px 29px #555;
+            -khtml-box-shadow:  12px 12px 29px #555;
+            -moz-box-shadow:    12px 12px 29px #555;
+            -webkit-box-shadow: 12px 12px 29px #555;
+            box-shadow:         12px 12px 29px #555;
+        }
+
+
+        p{
+            text-indent: 3em;
+        }
+
+        h1 {
+            color : rgba(4,55,73,1);
+        }
+
+        .shadow {
+            -o-box-shadow:      12px 12px 29px #555;
+            -icab-box-shadow:   12px 12px 29px #555;
+            -khtml-box-shadow:  12px 12px 29px #555;
+            -moz-box-shadow:    12px 12px 29px #555;
+            -webkit-box-shadow: 12px 12px 29px #555;
+            box-shadow:         12px 12px 29px #555;
+        }
+
     </style>
 </head>
 <body class="bodyType">
-    <h2>{{title}}:</h2>
-    <li><img width='200px' src='https://image.tmdb.org/t/p/w500{{poster_path}}' style="float: left;"/>
-        <p><b>Tagline:</b>          {{tagline}}</p>
-        <p><b>Original Language:</b> {{original_language}}</p>
-        <p><b>Release Date:</b>      {{release_date}}</p>
-        <p><b>Genres:</b>          {{#each genres}}{{name}},{{/each}}</p>
-        <p><b>Rate:</b>             {{vote_average}}</p>
-        <p><b>Overview:</b>         {{overview}}</p>
-    <li>
+
+<div display=" inline-block">
+
+    <div style="width: 60%; float:left">
+
+        <div style="width: 100%;" class = "wide"><ul><h1><b>{{title}}</b></h1></ul></div>
+
+        <div style="width: 20%; margin:5%; float:left" >
+            <img height='315px' class = shadow src='https://image.tmdb.org/t/p/w500{{poster_path}}'>
+        </div>
+
+
+        <div style="width: 60%; margin: 5% ;float: right">
+            <ul>
+                <object data="http://www.youtube.com/embed/{{results.videos.0.key}}"
+                        width="560" height="315" class = shadow>
+                </object>
+            </ul>
+        </div>
+
+        <div style="width: 100%;" class = "wide">
+            <p><b>Tagline:</b>          {{tagline}}</p>
+            <p><b>Original Language:</b> {{original_language}}</p>
+            <p><b>Release Date:</b>      {{release_date}}</p>
+            <p><b>Genres:</b>          {{#each genres}}{{name}},{{/each}}</p>
+            <p><b>Rate:</b>             {{vote_average}}</p>
+            <p><b>Overview:</b>         {{overview}}</p>
+        </div>
+
+    </div>
+</div>
+
+<div style="width: 20% ;float: right;" class = "wide">
+    <ul>
         <h2>Cast:</h2>
-        <table>
-        <tr>
-            <th>Character</th>
-            <th>Name</th>
-        </tr>
-        {{#each cast}}
-        <tr>
-            <td>{{character}}</td>
-            <td><p><a href="http://localhost:3000/Actor?actorId={{id}}">{{name}}</a></p></td>
-        </tr>
-        {{/each}}
-    </table>
-</li>
+        <table width="15%">
+            <tr>
+                <th>Character</th>
+                <th>Name</th>
+            </tr>
+            {{#each cast}}
+                <tr>
+                    <td>{{character}}</td>
+                    <td><p><a href="http://localhost:3000/Actor?actorId={{id}}">{{name}}</a></p></td>
+                </tr>
+            {{/each}}
+        </table>
+    </ul>
+</div>
+
+
+</div>
+
 </body>
 </html>
