@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
 
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
         ul {
             margin: 0 auto;
             text-align: center;
@@ -23,6 +25,135 @@
             color: rgba(4,55,73,1);
             background-image: url("http://enjoycss.com/bg-img/custom/22201-aaavzo.png");
             background-repeat: repeat;
+        }
+
+        body {
+            background-color: #3e94ec;
+            font-family: "Roboto", helvetica, arial, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            text-rendering: optimizeLegibility;
+        }
+
+        .table-title h3 {
+            color: #fafafa;
+            font-size: 10px;
+            font-weight: 400;
+            font-style:normal;
+            font-family: "Roboto", helvetica, arial, sans-serif;
+            text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+            text-transform:uppercase;
+        }
+
+        .table-fill {
+            background: white;
+            border-collapse: collapse;
+            height: 320px;
+            margin: 5%;
+            max-width: 600px;
+            width: 100%;
+            animation: float 5s infinite;
+            -o-text-overflow: clip;
+            text-overflow: clip;
+            text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+            -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+            -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+            -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+            transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+            -o-box-shadow:      12px 12px 29px #555;
+            -moz-box-shadow:    12px 12px 29px #555;
+            -webkit-box-shadow: 12px 12px 29px #555;
+            box-shadow:         12px 12px 29px #555;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            padding: 10px 20px;
+            border: 1px solid #b7b7b7;
+            -webkit-border-radius: 3px;
+            border-radius: 10px;
+        }
+
+        th {
+            color:#D5DDE5;;
+            background:grey;
+            border-bottom:4px solid #9ea7af;
+            border-right: 1px solid #343a45;
+            font-size:10px;
+            padding:5px;
+            text-align:left;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            vertical-align:middle;
+        }
+
+        th:first-child {
+            border-top-left-radius:3px;
+        }
+
+        th:last-child {
+            border-top-right-radius:3px;
+            border-right:none;
+        }
+
+        tr {
+            border-top: 1px solid #C1C3D1;
+            border-bottom-: 1px solid #C1C3D1;
+            color:#666B85;
+            font-size:10px;
+            padding:5px;
+            text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+        }
+
+        tr:hover td {
+            background:#4E5066;
+            color:#FFFFFF;
+            border-top: 1px solid #22262e;
+        }
+
+        tr:first-child {
+            border-top:none;
+        }
+
+        tr:last-child {
+            border-bottom:none;
+        }
+
+        tr:nth-child(odd) td {
+            background:#EBEBEB;
+        }
+
+        tr:nth-child(odd):hover td {
+            background:#4E5066;
+        }
+
+        tr:last-child td:first-child {
+            border-bottom-left-radius:3px;
+        }
+
+        tr:last-child td:last-child {
+            border-bottom-right-radius:3px;
+        }
+
+        td {
+            background:#FFFFFF;
+            padding:20px;
+            text-align:left;
+            vertical-align:middle;
+            font-size:10px;
+            padding:5px;
+            text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+            border-right: 1px solid #C1C3D1;
+        }
+
+        td:last-child {
+            border-right: 0px;
+        }
+
+        th.text-left {
+            text-align: left;
+        }
+
+        td.text-left {
+            text-align: left;
         }
 
         .wide {
@@ -54,13 +185,13 @@
             box-shadow:         12px 12px 29px #555;
         }
 
-
-        p{
-            text-indent: 3em;
-        }
-
         h1 {
             color : rgba(4,55,73,1);
+            font-family: 'Enriqueta', arial, serif; line-height: 1.25; margin: 0 0 10px; font-size: 40px; font-weight: bold;
+        }
+
+        h2 {
+            font-family: 'Enriqueta', arial, serif; line-height: 1.25; margin: 0 0 10px; font-size: 20px; font-weight: bold;
         }
 
         .shadow {
@@ -72,6 +203,39 @@
             box-shadow:         12px 12px 29px #555;
         }
 
+        .wideWatMark {
+            display: inline-block;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            margin: 5%;
+            padding: 10px 20px;
+            border: 1px solid #b7b7b7;
+            -webkit-border-radius: 3px;
+            border-radius: 10px;
+            background-color: WhiteSmoke;
+            color: rgba(4,55,73,1);
+            -o-text-overflow: clip;
+            text-overflow: clip;
+            -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+            box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+            text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+            -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+            -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+            -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+            transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+            -o-box-shadow:      12px 12px 29px #555;
+            -icab-box-shadow:   12px 12px 29px #555;
+            -khtml-box-shadow:  12px 12px 29px #555;
+            -moz-box-shadow:    12px 12px 29px #555;
+            -webkit-box-shadow: 12px 12px 29px #555;
+            box-shadow:         12px 12px 29px #555;
+            background-image: url('https://www.themoviedb.org/assets/static_cache/bb45549239e25f1770d5f76727bcd7c0/images/v4/logos/408x161-powered-by-rectangle-blue.png');
+            background-position: 95% 50%;
+            background-size: 100px 40px;
+            background-repeat: no-repeat;
+        }
+
     </style>
 </head>
 <body class="bodyType">
@@ -80,7 +244,7 @@
 
     <div style="width: 60%; float:left">
 
-        <div style="width: 100%;" class = "wide"><ul><h1><b>{{title}}</b></h1></ul></div>
+        <div style="width: 100%;" class = "wideWatMark"><ul><h1><b>{{title}}</b></h1></ul></div>
 
         <div style="width: 20%; margin:5%; float:left" >
             <img height='315px' class = shadow src='https://image.tmdb.org/t/p/w500{{poster_path}}'>
@@ -89,13 +253,13 @@
 
         <div style="width: 60%; margin: 5% ;float: right">
             <ul>
-                <object data="http://www.youtube.com/embed/{{results.videos.0.key}}"
+                <object data="http://www.youtube.com/embed/{{video}}"
                         width="560" height="315" class = shadow>
                 </object>
             </ul>
         </div>
 
-        <div style="width: 100%;" class = "wide">
+        <div style="width: 100%; " class = "wide">
             <p><b>Tagline:</b>          {{tagline}}</p>
             <p><b>Original Language:</b> {{original_language}}</p>
             <p><b>Release Date:</b>      {{release_date}}</p>
@@ -107,25 +271,26 @@
     </div>
 </div>
 
-<div style="width: 20% ;float: right;" class = "wide">
+<div style="width: 30% ;float: right; padding-right: 5%;">
     <ul>
-        <h2>Cast:</h2>
-        <table width="15%">
+        <table class="table-fill">
+            <thead>
             <tr>
-                <th>Character</th>
-                <th>Name</th>
+                <th class="text-left">Actor</th>
+                <th class="text-left">Role</th>
             </tr>
+            </thead>
+            <tbody class="table-hover">
+            <tr>
             {{#each cast}}
                 <tr>
                     <td>{{character}}</td>
                     <td><p><a href="http://localhost:3000/Actor?actorId={{id}}">{{name}}</a></p></td>
                 </tr>
             {{/each}}
+            </tbody>
         </table>
     </ul>
-</div>
-
-
 </div>
 
 </body>

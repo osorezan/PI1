@@ -12,4 +12,5 @@ function Movie(movieDetails, cast) {
     this.vote_average = movieDetails.vote_average
     this.poster_path = movieDetails.poster_path
     this.cast = cast.cast
+    this.video = movieDetails.videos.results[0].key
 }
