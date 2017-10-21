@@ -1,5 +1,7 @@
 module.exports = Actor
 
+var actorCache= new Array();
+
 function Actor(actorDetails, movies) {
     this.name = actorDetails.name
     this.birthday = actorDetails.birthday

@@ -56,7 +56,7 @@ function actionCallback(resp, view) {
             data =  view(obj)
             resp.statusCode = 200
         }
-        resp.setHeader('Content-Type', 'text/html')
+        //resp.setHeader('Content-Type', 'text/html')
         resp.end(data)
     }
 }
