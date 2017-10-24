@@ -34,7 +34,10 @@ function init(dataSource) {
         //insert %20?
         //var argsString = Array.prototype.join.call(name, "%20");
         const path = `https://api.themoviedb.org/3/search/movie?api_key=668c5f272f87669446f01cfcc3ab13f4&query=${name}`;
-        reqAsJson(path, cb);
+        // ver todas as páginas
+        reqAsJson(path, (err, list) => {
+            // se page < total_pages faz novo pedido com page+1 e acrescenta os results aos anteriores
+        } );
     }
 
     function getActorDetails(actorId , cb){
@@ -68,6 +71,7 @@ function init(dataSource) {
             if (err) return cb(err)
             reqAsJson(charPath, (err, char) => {
                 if (err) return cb(err)
+             //   createTrailer(movieId);
                 cb(null, cacheMovie(movie, char, movieId))
 
             });
@@ -81,5 +85,16 @@ function init(dataSource) {
         movieCache[movieId] = m;
         return m;
     }
+
+    //acho que temos de criar aqui a parte do html para o trailer
+    /*function createTrailer(movieId){
+        var div = document.createElement('div');
+        document.body.appendChild(div);
+        div.style.width = '100%';
+        var ul=document.createElement('ul');
+        var iframe = document.createElement('iframe');
+        iframe.style.src('http://www.youtube.com/embed/${}');
+        div.appendChild(ul);
+    }*/
 
 }
