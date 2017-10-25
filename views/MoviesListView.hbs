@@ -33,9 +33,7 @@
             border: 5px solid #fff;
 
             -webkit-transition: box-shadow 0.5s ease;
-            -moz-transition: box-shadow 0.5s ease;
             -o-transition: box-shadow 0.5s ease;
-            -ms-transition: box-shadow 0.5s ease;
             transition: box-shadow 0.5s ease;
         }
 
@@ -52,7 +50,11 @@
     <ol>
         <li>
 {{#each results}}
-            <a  href="http://localhost:3000/MovieDetail?movieId={{id}}"/><img width='200px' src='https://image.tmdb.org/t/p/w500{{poster_path}}'>
+    {{#if poster_path}}
+        <a  href="http://localhost:3000/MovieDetail?movieId={{id}}"/><img width='200px' height="280px" src='https://image.tmdb.org/t/p/w500{{poster_path}}'>
+    {{else}}
+
+    {{/if}}
 {{/each}}
         </li>
     </ol>

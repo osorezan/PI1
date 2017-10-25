@@ -46,27 +46,27 @@
         }
 
         .table-fill {
+            display: block;
             background: white;
             border-collapse: collapse;
-            height: 320px;
             margin: 5%;
-            max-width: 600px;
+            height: 100%;
+            max-height: 800px;
             width: 100%;
             animation: float 5s infinite;
             -o-text-overflow: clip;
             text-overflow: clip;
             text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
             -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-            -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
             -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
             transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
             -o-box-shadow:      12px 12px 29px #555;
-            -moz-box-shadow:    12px 12px 29px #555;
             -webkit-box-shadow: 12px 12px 29px #555;
             box-shadow:         12px 12px 29px #555;
             -webkit-box-sizing: content-box;
-            -moz-box-sizing: content-box;
             box-sizing: content-box;
+            overflow-y: auto;
+            overflow-x: hidden;
             padding: 10px 20px;
             border: 1px solid #b7b7b7;
             -webkit-border-radius: 3px;
@@ -78,7 +78,7 @@
             background:grey;
             border-bottom:4px solid #9ea7af;
             border-right: 1px solid #343a45;
-            font-size:10px;
+            font-size:17px;
             padding:5px;
             text-align:left;
             text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -96,9 +96,9 @@
 
         tr {
             border-top: 1px solid #C1C3D1;
-            border-bottom-: 1px solid #C1C3D1;
+            border-bottom: 1px solid #C1C3D1;
             color:#666B85;
-            font-size:10px;
+            font-size:15px;
             padding:5px;
             text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
         }
@@ -135,10 +135,9 @@
 
         td {
             background:#FFFFFF;
-            padding:20px;
             text-align:left;
             vertical-align:middle;
-            font-size:10px;
+            font-size:12px;
             padding:5px;
             text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
             border-right: 1px solid #C1C3D1;
@@ -159,7 +158,6 @@
         .wide {
             display: inline-block;
             -webkit-box-sizing: content-box;
-            -moz-box-sizing: content-box;
             box-sizing: content-box;
             margin: 5%;
             padding: 10px 20px;
@@ -170,17 +168,11 @@
             color: rgba(4,55,73,1);
             -o-text-overflow: clip;
             text-overflow: clip;
-            -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
-            box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
             text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
             -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-            -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
             -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
             transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
             -o-box-shadow:      12px 12px 29px #555;
-            -icab-box-shadow:   12px 12px 29px #555;
-            -khtml-box-shadow:  12px 12px 29px #555;
-            -moz-box-shadow:    12px 12px 29px #555;
             -webkit-box-shadow: 12px 12px 29px #555;
             box-shadow:         12px 12px 29px #555;
         }
@@ -196,9 +188,6 @@
 
         .shadow {
             -o-box-shadow:      12px 12px 29px #555;
-            -icab-box-shadow:   12px 12px 29px #555;
-            -khtml-box-shadow:  12px 12px 29px #555;
-            -moz-box-shadow:    12px 12px 29px #555;
             -webkit-box-shadow: 12px 12px 29px #555;
             box-shadow:         12px 12px 29px #555;
         }
@@ -206,7 +195,6 @@
         .wideWatMark {
             display: inline-block;
             -webkit-box-sizing: content-box;
-            -moz-box-sizing: content-box;
             box-sizing: content-box;
             margin: 5%;
             padding: 10px 20px;
@@ -217,17 +205,11 @@
             color: rgba(4,55,73,1);
             -o-text-overflow: clip;
             text-overflow: clip;
-            -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
-            box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
             text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
             -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-            -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
             -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
             transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
             -o-box-shadow:      12px 12px 29px #555;
-            -icab-box-shadow:   12px 12px 29px #555;
-            -khtml-box-shadow:  12px 12px 29px #555;
-            -moz-box-shadow:    12px 12px 29px #555;
             -webkit-box-shadow: 12px 12px 29px #555;
             box-shadow:         12px 12px 29px #555;
             background-image: url('https://www.themoviedb.org/assets/static_cache/bb45549239e25f1770d5f76727bcd7c0/images/v4/logos/408x161-powered-by-rectangle-blue.png');
@@ -252,11 +234,11 @@
 
 
         <div class="wide" style="width: 45%; margin: 5% ;float: right">
-                <p><b>Birthday:</b> {{birthday}}</p>
-                <p><b>Deathday:</b> {{deathday}}</p>
-                <p><b>Place Of Birth:</b> {{place_of_birth}}</p>
-                <p><b>Homepage:</b> {{homepage}}</p>
-                <p><b>Biography:</b> {{biography}}</p>
+{{#if birthday}}                <p><b>Birthday:</b> {{birthday}}</p>  {{/if}}
+{{#if deathday}}                <p><b>Deathday:</b> {{deathday}}</p>  {{/if}}
+{{#if place_of_birth}}                <p><b>Place Of Birth:</b> {{place_of_birth}}</p>  {{/if}}
+{{#if homepage}}                <p><b>Homepage:</b> {{homepage}}</p>  {{/if}}
+{{#if biography}}                <p><b>Biography:</b> {{biography}}</p>  {{/if}}
         </div>
 
     </div>
