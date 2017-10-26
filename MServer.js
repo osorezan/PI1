@@ -30,14 +30,20 @@ function init(dataSource) {
         })
     }
 
-    function getMovies(name, cb){
+    function getMovies(name, cb) {
         //insert %20?
         //var argsString = Array.prototype.join.call(name, "%20");
         const path = `https://api.themoviedb.org/3/search/movie?api_key=668c5f272f87669446f01cfcc3ab13f4&query=${name}`;
-        // ver todas as páginas
+        const pathPage = `https://api.themoviedb.org/3/search/movie?api_key=668c5f272f87669446f01cfcc3ab13f4&query=${name}&page=${pg}`;
+        var pg = 1;
         reqAsJson(path, cb);
-        //reqAsJson(path, (err, list) => {
-            // se page < total_pages faz novo pedido com page+1 e acrescenta os results aos anteriores
+        /*reqAsJson(path, (err, list) => {
+            for( ; page < total_pages ; pg++){
+                ;
+                //reqAsJson(pathPage, );
+                // acrescenta os results aos anteriores
+            }
+        }*/
         //} );
     }
 
@@ -72,9 +78,7 @@ function init(dataSource) {
             if (err) return cb(err)
             reqAsJson(charPath, (err, char) => {
                 if (err) return cb(err)
-             //   createTrailer(movieId);
                 cb(null, cacheMovie(movie, char, movieId))
-
             });
         });
         }
