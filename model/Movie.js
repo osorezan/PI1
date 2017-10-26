@@ -14,4 +14,7 @@ function Movie(movieDetails, cast) {
     this.cast = cast.cast
     if(movieDetails.videos.results[0] != null)
         this.video = movieDetails.videos.results[0].key
+    if(movieDetails.images.backdrops[0]!= null)
+        this.images = movieDetails.images.backdrops[0].file_path
+
 }
