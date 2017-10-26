@@ -24,12 +24,28 @@
         .bodyType {
             font: normal normal 14px/normal "Times New Roman", Times, serif;
             color: rgba(4,55,73,1);
-            background-image: url("http://enjoycss.com/bg-img/custom/22201-aaavzo.png");
-            background-repeat: repeat;
+        }
+
+        .background-image
+        {
+            position: fixed;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            background-image: url(https://image.tmdb.org/t/p/w500/{{images}});
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+        -webkit-filter: blur(10px);
+        -moz-filter: blur(10px);
+        -o-filter: blur(10px);
+        -ms-filter: blur(10px);
+        filter: blur(10px);
+            background-attachment: fixed;
         }
 
         body {
-            background-color: #3e94ec;
+            background-color: black;
             font-family: "Roboto", helvetica, arial, sans-serif;
             font-size: 16px;
             font-weight: 400;
@@ -51,18 +67,12 @@
             background: white;
             border-collapse: collapse;
             height: 100%;
-            max-height: 800px;
-            //width: 100%;
-            animation: float 5s infinite;
-            -o-text-overflow: clip;
-            text-overflow: clip;
-            text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
-            -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-            -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-            transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+            width: 100%;
             -o-box-shadow:      12px 12px 29px #555;
             -webkit-box-shadow: 12px 12px 29px #555;
             box-shadow:         12px 12px 29px #555;
+
+            max-height: 800px;
             -webkit-box-sizing: content-box;
             box-sizing: content-box;
             overflow-y: auto;
@@ -92,6 +102,7 @@
             -o-box-shadow:      12px 12px 29px #555;
             -webkit-box-shadow: 12px 12px 29px #555;
             box-shadow:         12px 12px 29px #555;
+
         }
 
         h1 {
@@ -137,22 +148,32 @@
             background-repeat: no-repeat;
         }
 
+        .content {
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            margin-left: 20px;
+            margin-right: 20px;
+
+        }
+
     </style>
 </head>
 <body class="bodyType">
 
 <div display=" inline-block">
-
-    <div style="width: 60%; float:left">
+    <div class="content">
+    <div style="width: 70%; float:left">
 
         <div style="width: 100%;" class = "wideWatMark"><ul><h1><b>{{title}}</b></h1></ul></div>
 
-        <div style="width: 20%; margin:5%; float:left" >
-            <img height='315px' class = shadow src='https://image.tmdb.org/t/p/w500{{poster_path}}'>
+        <div style="width: 20%; margin:5%; float:left " >
+            <img img width='315px' class = shadow src='https://image.tmdb.org/t/p/w500{{poster_path}}'>
         </div>
 
 
-        <div class="wide" style="width: 50%; margin: 5% ;float: right">
+        <div class="wide container" style="width: 50%;float: right">
 {{#if tagline}}            <p><b>Tagline:</b>          {{tagline}}</p>  {{/if}}
 {{#if original_language}}            <p><b>Original Language:</b> {{original_language}}</p>  {{/if}}
 {{#if release_date}}            <p><b>Release Date:</b>      {{release_date}}</p>  {{/if}}
@@ -161,7 +182,7 @@
 {{#if overview}}            <p><b>Overview:</b>         {{overview}}</p>  {{/if}}
         </div>
         {{#if video}}
-            <div style="width: 100%; ">
+            <div style="width: 100%; margin: 5%;">
                 <ul>
                     <object data="http://www.youtube.com/embed/{{video}}"
                             width="560" height="315" class = shadow>
@@ -170,12 +191,11 @@
             </div>
         {{/if}}
     </div>
-</div>
 
 {{#if cast}}
-<div style="width: 30% ;float: right; padding-right: 5%; padding-top:5%">
+<div class = "container"style="width: 23% ;float: right; padding-right: 5%; padding-top:5%">
     <ul>
-        <table class="table-fill table table-striped">
+        <table class="table-fill table table-striped " >
             <thead class="thead-inverse">
             <tr>
                 <th class="text-left">Actor</th>
@@ -193,7 +213,10 @@
             </tbody>
         </table>
     </ul>
-</div>
 {{/if}}
+</div>
+    </div>
+    <div class="background-image"  no-repeat center ></div>
+</div>
 </body>
 </html>
