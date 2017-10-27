@@ -3,73 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>COIMA.com</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <style type="text/css">
-
-        @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
-
-        .bodyType {
-            font: normal normal 14px/normal "Times New Roman", Times, serif;
-            color: rgba(4,55,73,1);
-        }
-
-        .wideWatMark {
-            display: inline-block;
-            -webkit-box-sizing: content-box;
-            box-sizing: content-box;
-            margin: 5%;
-            padding: 10px 20px;
-            border: 1px solid #b7b7b7;
-            -webkit-border-radius: 3px;
-            border-radius: 5px;
-            background-color: WhiteSmoke;
-            color: rgba(4,55,73,1);
-            -o-text-overflow: clip;
-            text-overflow: clip;
-            text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
-            -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-            -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-            transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-            -o-box-shadow:      12px 12px 29px #555;
-            box-shadow:    12px 12px 29px #555;
-            -webkit-box-shadow: 12px 12px 29px #555;
-            box-shadow:         12px 12px 29px #555;
-            background-image: url('https://www.themoviedb.org/assets/static_cache/bb45549239e25f1770d5f76727bcd7c0/images/v4/logos/408x161-powered-by-rectangle-blue.png');
-            background-position: 95% 50%;
-            background-size: 100px 40px;
-            background-repeat: no-repeat;
-        }
-
-
-        h1 {
-            color : rgba(4,55,73,1);
-            font-family: 'Enriqueta', arial, serif; line-height: 1.25; margin: 0 0 10px; font-size: 40px; font-weight: bold;
-        }
-
-        h2 {
-            font-family: 'Enriqueta', arial, serif; line-height: 1.25; margin: 0 0 10px; font-size: 20px; font-weight: bold;
-        }
-
-        .shadow {
-            -o-box-shadow:      12px 12px 29px #555;
-            -webkit-box-shadow: 12px 12px 29px #555;
-            box-shadow:         12px 12px 29px #555;
-        }
 
         ul {
             margin: 0 auto;
             text-align: center;
         }
-
         li {
             display: inline-block;
             vertical-align: top;
         }
-
+        body {
+            background-color: black;
+            font-size: 16px;
+            font-weight: 400;
+            text-rendering: optimizeLegibility;
+        }
+        h1 {
+            color: rgba(4, 55, 73, 1);
+            font-family: 'Enriqueta', arial, serif;
+            line-height: 1.25;
+            margin: 0 0 10px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        h2 {
+            font-family: 'Enriqueta', arial, serif;
+            line-height: 1.25;
+            margin: 0 0 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        td {
+            font-size: small;
+        }
         .background-image {
             position: fixed;
             left: 0;
@@ -78,37 +48,27 @@
             background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/RGBxnOy/hollywood-sign-time-lapse-2-classic-the-world-famous-hollywood-sign-in-los-angeles-california-retro-black-and-white-film-style-with-timelapse-clouds-and-sun-billowing-behind-all-elements-created-shot-and-edited-by-atomazul_njuwdlg9__F0000.png");
             width: 100%;
             height: 100%;
-            background-size: 100%;
-            repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
         }
-
-        body {
-            background-color: black;
-            font-family: "Roboto", helvetica, arial, sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            text-rendering: optimizeLegibility;
-        }
-
         .table-title h3 {
             color: #fafafa;
             font-size: 10px;
             font-weight: 400;
-            font-style:normal;
+            font-style: normal;
             font-family: "Roboto", helvetica, arial, sans-serif;
             text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-            text-transform:uppercase;
+            text-transform: uppercase;
         }
-
         .table-fill {
-            display:inline-block;
+            display: inline-block;
             background: white;
             border-collapse: collapse;
             height: 100%;
             width: 100%;
-            -o-box-shadow:      12px 12px 29px #555;
+            -o-box-shadow: 12px 12px 29px #555;
             -webkit-box-shadow: 12px 12px 29px #555;
-            box-shadow:         12px 12px 29px #555;
+            box-shadow: 12px 12px 29px #555;
 
             max-height: 800px;
             -webkit-box-sizing: content-box;
@@ -119,30 +79,35 @@
             -webkit-border-radius: 3px;
             border-radius: 10px;
         }
-
         .wide {
             display: inline-block;
-            -webkit-box-sizing: content-box;
-            box-sizing: content-box;
-            margin: 5%;
-            padding: 10px 20px;
             border: 1px solid #b7b7b7;
             -webkit-border-radius: 3px;
             border-radius: 5px;
             background-color: WhiteSmoke;
-            color: rgba(4,55,73,1);
-            -o-text-overflow: clip;
-            text-overflow: clip;
-            text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
-            -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-            -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-            transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-            -o-box-shadow:      12px 12px 29px #555;
+            color: rgba(4, 55, 73, 1);
+            -o-box-shadow: 12px 12px 29px #555;
             -webkit-box-shadow: 12px 12px 29px #555;
-            box-shadow:         12px 12px 29px #555;
+            box-shadow: 12px 12px 29px #555;
 
         }
-
+        .shadow {
+            -o-box-shadow: 12px 12px 29px #555;
+            box-shadow: 12px 12px 29px #555;
+            -webkit-box-shadow: 12px 12px 29px #555;
+            box-shadow: 12px 12px 29px #555;
+        }
+        .wideWatMark {
+            border: 1px solid #b7b7b7;
+            -webkit-border-radius: 3px;
+            border-radius: 5px;
+            background-color: WhiteSmoke;
+            color: rgba(4, 55, 73, 1);
+            -o-box-shadow: 12px 12px 29px #555;
+            box-shadow: 12px 12px 29px #555;
+            -webkit-box-shadow: 12px 12px 29px #555;
+            box-shadow: 12px 12px 29px #555;
+        }
         .content {
             position: absolute;
             left: 0;
@@ -152,55 +117,70 @@
             margin-right: 20px;
 
         }
-
+        .floating {
+            display: inline-block;
+        / / border: 3 px solid #73AD21;
+        }
+        .formatted {
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 5%;
+        }
     </style>
 
 </head>
-<body class="bodyType">
-<div class="background-image"  no-repeat center ></div>
-<div class = "content" display=" inline-block">
+<body>
+<div class="floating">
 
-    <div style="width: 60%; float:left">
+    <div class="content">
 
-        <div style="width: 100%;" class = "wideWatMark"><ul><h1><b>{{name}}</b></h1></ul></div>
+        <div class="floating" style="width: 75%; margin: 20px">
 
-        <div style="width: 25%; margin:5%; float:left" >
-            <img width='315px' class="shadow" src='https://image.tmdb.org/t/p/w500{{profile_path}}'/>
+            <div style="width: 100%;" class="wideWatMark floating">
+                <ul><h1><b>{{name}}</b></h1></ul>
+            </div>
         </div>
 
+        <div class="floating" style="width: 75%; margin-top: 2%; background-color:rgba(245,245,245, 0.1)">
 
-        <div class="wide" style="width: 45%; margin: 5% ;float: right">
-{{#if birthday}}                <p><b>Birthday:</b> {{birthday}}</p>  {{/if}}
-{{#if deathday}}                <p><b>Deathday:</b> {{deathday}}</p>  {{/if}}
-{{#if place_of_birth}}                <p><b>Place Of Birth:</b> {{place_of_birth}}</p>  {{/if}}
-{{#if homepage}}                <p><b>Homepage:</b> {{homepage}}</p>  {{/if}}
-{{#if biography}}                <p><b>Biography:</b> {{biography}}</p>  {{/if}}
+            <div class="floating formatted" style="width: 30% ; float: left;">
+                <img width='100%' class="shadow" src='https://image.tmdb.org/t/p/w500{{profile_path}}'/>
+            </div>
+
+            <div class="wide floating formatted" style=" margin-bottom: 5%; width: 50%; float: right">
+                {{#if birthday}}                <p><b>Birthday:</b> {{birthday}}</p>  {{/if}}
+                {{#if deathday}}                <p><b>Deathday:</b> {{deathday}}</p>  {{/if}}
+                {{#if place_of_birth}}                <p><b>Place Of Birth:</b> {{place_of_birth}}</p>  {{/if}}
+                {{#if homepage}}                <p><b>Homepage:</b> {{homepage}}</p>  {{/if}}
+                {{#if biography}}                <p><b>Biography:</b> {{biography}}</p>  {{/if}}
+            </div>
+
         </div>
 
-    </div>
-
-<div style="width: 30% ;float: right; padding-right: 5%; padding-top:5%">
-    <ul>
-        <table class="table-fill table table-striped">
-            <thead class="thead-inverse">
+        <div class="container floating" style="width: 23% ;float: right; padding-right: 5%; ">
+        <ul>
+            <table class=" table-fill table table-striped ">
+        <thead class="thead-inverse">
+        <tr>
+            <th class="text-left">Movie</th>
+            <th class="text-left">Character</th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr>
+        {{#each cast}}
             <tr>
-                <th class="text-left">Movie</th>
-                <th class="text-left">Character</th>
+                <td><p><a href="http://localhost:3000/MovieDetail?movieId={{id}}">{{title}}</a></p></td>
+                <td>{{character}}</td>
             </tr>
-            </thead>
-            <tbody class="table-hover">
-            <tr>
-            {{#each cast}}
-                <tr>
-                    <td><p><a href="http://localhost:3000/MovieDetail?movieId={{id}}">{{title}}</a></p></td>
-                    <td>{{character}}</td>
-                </tr>
-            {{/each}}
-            </tbody>
+        {{/each}}
+        </tbody>
         </table>
 
-    </ul>
-</div>
+        </ul>
+    </div>
+    </div>>
+<div class="background-image" no-repeat center></div>
 </div>
 </body>
 </html>
