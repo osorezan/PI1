@@ -42,7 +42,7 @@ function init(dataSource) {
                 const pathPage = `https://api.themoviedb.org/3/search/movie?api_key=668c5f272f87669446f01cfcc3ab13f4&query=${name}&page=${pg}`;
                 reqAsJson(pathPage, (err,list2) => {
                     if (err) return cb(err);
-                    list.results = list.results.concat(list2.results)
+                    list.results = list.results.concat(list2.results) 
                 });
             }
             cb(null, list);
