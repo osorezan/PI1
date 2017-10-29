@@ -31,9 +31,9 @@ function init(dataSource) {
     return services
 
     function reqAsJson(path, cb) {
-        limiter.req(path, (err, res, data) => {
+        limiter.request({url: path,method:'GET'}, (err, res) => {
             if (err) return cb(err)
-            const obj = JSON.parse(data.toString())
+            const obj = JSON.parse(res.body)
             cb(null, obj)
         })
     }
