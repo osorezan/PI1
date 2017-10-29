@@ -2,6 +2,14 @@
 
 const Movie = require('./model/Movie')
 const Actor = require('./model/Actor')
+const RateLimiter = require('request-rate-limiter')
+const limiter = new RateLimiter({
+    rate:40,
+    interval:10,
+    backofCode:429,
+    backofTime:9,
+    maxWaitingTime:9
+})
 
 var movieCache = new Array();
 var actorCache = new Array();
@@ -23,7 +31,7 @@ function init(dataSource) {
     return services
 
     function reqAsJson(path, cb) {
-        req(path, (err, res, data) => {
+        limiter.req(path, (err, res, data) => {
             if (err) return cb(err)
             const obj = JSON.parse(data.toString())
             cb(null, obj)
