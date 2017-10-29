@@ -34,17 +34,16 @@ function init(dataSource) {
         //insert %20?
         //var argsString = Array.prototype.join.call(name, "%20");
         const path = `https://api.themoviedb.org/3/search/movie?api_key=668c5f272f87669446f01cfcc3ab13f4&query=${name}`;
+        var pg = 2;
         const pathPage = `https://api.themoviedb.org/3/search/movie?api_key=668c5f272f87669446f01cfcc3ab13f4&query=${name}&page=${pg}`;
-        var pg = 1;
         reqAsJson(path, cb);
         /*reqAsJson(path, (err, list) => {
-            for( ; page < total_pages ; pg++){
-                ;
-                //reqAsJson(pathPage, );
-                // acrescenta os results aos anteriores
+            for (; list.page < list.total_pages; pg++) {
+                reqAsJson(pathPage, null);
+               // list.result(reqAsJson(pathPage, cb));
             }
-        }*/
-        //} );
+            cb(null, list);
+        } );*/
     }
 
     function getActorDetails(actorId , cb){
