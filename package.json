@@ -11,6 +11,6 @@
   },
 
   "scripts": {
-    "start": "MWebApp.js"
+    "start": "node MWebApp.js"
   }
 }
