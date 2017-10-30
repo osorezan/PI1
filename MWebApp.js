@@ -7,7 +7,7 @@ const port = 3000
 
 const server = http.createServer(router)
 
-server.listen(port)
+server.listen(process.env.PORT || port)
 
 const routes = {
 
